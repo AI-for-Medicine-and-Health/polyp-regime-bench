@@ -1,0 +1,3998 @@
+{
+  "frozen_at_utc": "2026-09-30T15:28:35.344709+00:00",
+  "source_manuscript_selection_file": "analysis/Benchmarking Polyp Detection in White-Light Endoscopy/generated/top6_ap001_operating020_vote001_validation_selections.json",
+  "source_manuscript_selection_sha256": "7509f3dba47dce569f44c5afc85349907e19da65e041af029dd835b18edd79e8",
+  "rule": "Top-6 by validation mAP50:95 at input score >=0.001; rank ties by operating-point recall then model name",
+  "conditions": {
+    "pretrained_base": {
+      "666": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolo12_s",
+            "fasterrcnn_resnet50_fpn",
+            "yolov9_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "6e47d39ded4f47f0da1792f3a407a4f25ec7378699cefa22b935b51188fa1fc8",
+            "rtdetr_l": "7cba104581e20a5914c530441ab178540db7b6ea85b24084597e5217d8c46820",
+            "yolo26_s": "014dd9418391c14d10a8b23b45a956a493259465b9b63537aeab83d935073c06",
+            "yolo12_s": "e35596471677871cae6e59702cf33c5614a5bc2b945e1e72d2dd03f18dccaeb5",
+            "fasterrcnn_resnet50_fpn": "8266a0cbd40083348b39be88b493a2ea3cedb1c36da51f3f6973111d205242e2",
+            "yolov9_s": "e96279f12b61a315d53e70b86c5475aed709e820986819e88586a9fe50f8597d"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.642350515219227
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6317127703079056
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6060950999904844
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5963554341613178
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5852543215137322
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5738415849449989
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.570702181121551
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5703293949024121
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5617755523441094
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5489075356574387
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5339076198509773
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5190550692523365
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolov5_s",
+            "yolo11_s",
+            "yolov9_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "d997ec50ddf245f244142956206ebab6178219a450b92a58d539e035ee879a6d",
+            "rtdetr_l": "eef67b08892fee952ff097f170cd517fb6297b38c51cf34a43fe0f0849be529e",
+            "yolo12_s": "088e6eb4163a824ece3d8ed66839c0cadbb1d62217138251aaf2b58b4f1ef89f",
+            "yolov5_s": "1ea5d3677ceca5a64e0d02a66009feb479f3eb314c5cbd72ad415de08e9915cc",
+            "yolo11_s": "7b4df9f9a45c0ee1518836b8799883b670f886f17edc0473fbe29c6d5f16a0d9",
+            "yolov9_s": "d7abf2473dfcd2e662e20370a5cdc06846cd18a95f8ad623126aea8801f764dd"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6397694538386128
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6173294733897456
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5928111195249239
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5851438538492353
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5842337582937568
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5639194801949892
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5593180421796135
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.558800932950359
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5573720778165077
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.547335702841113
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5360652386735132
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5077725851805196
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolo11_s",
+            "yolov8_s",
+            "yolov9_s",
+            "yolo12_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "60b20fde8a09a0eea89e3880480a30739bdeb28208d8746196b43b53183af8b7",
+            "rtdetr_x": "5edd101c408469368ea15dda133cf35dafdc8f44abf2fe822f47160f582671b4",
+            "yolo11_s": "3e5164b7fefdb3a20832148edf5b3508388f3badb4ecd97ad6bc19d0e92843d0",
+            "yolov8_s": "9e2aa22866e6280e75cbfcd85102b33a7af9cebb85dd43ec5244b95f00d6aa01",
+            "yolov9_s": "049ef46233cf821ebadddd2cb4b44ce2f6e615cf02ee82b5841aeae132c89ff5",
+            "yolo12_s": "7533fd0b738eab3bd07e2b282858974a572b4f4536ee0be3771fed2dd16aa90d"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7729006964534056
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7661124585641141
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7066478917783832
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7041190426295512
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7036800984941294
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7007210173297524
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.693198131105522
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6905170700912191
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6879149474097173
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6752407702620599
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6522914258532538
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6280111136205504
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "123": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "yolo12_s",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo26_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "3458c7775d068a3b0f8481da97dac4fd640f3065e509e4ca993f2f90ad58d7c9",
+            "yolo12_s": "b824a3f121f7bbd7ff781214dab3132c8de4ff1890894087f1e9c6d5489dd343",
+            "rtdetr_l": "b18c17e029eab5d2f0253275037924326e8812dfb0b0a4e5ab5fbed08fd3d11f",
+            "yolov9_s": "ef0057dc9ca8f63a9cf24a237df87a909a4185025bbd12772e6335817e5a74c6",
+            "yolo26_s": "1647c6c198c285fd54c26b929e2e7976a2d650a31f0c4d242524dc659de03cea",
+            "yolo11_s": "06f1e1b1b7c2f4686c8d37e8c4a97955e4b2037c8f7da0211b69be78a454be98"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6422925356175531
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6044100957430156
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6025806539977039
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5923156787775128
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5818814439478416
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5785184859966307
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5651718650870876
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5497857133652484
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5405045201190328
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5359627160712203
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5240961694685583
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.510398991973319
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "496463c2157bfa3dce3fe529c0c5bd7ba8cd6ada69fa6aaae11f1ac0c4f4daa4",
+            "rtdetr_l": "0f0ad31272bdc909e6f01245756b58eb034a540345e49903ef23f4c0a364c327",
+            "yolov9_s": "c98bf88ec623fa8b011f99e229963f385b237fffc24308d9d32694c1fd383f39",
+            "yolo12_s": "4760eb9a529f15416294bc10f88a2c74982aecd2ab92425946d4e17b9ffe45db",
+            "yolo11_s": "98b97f03ebde3759e647fbc2c313f4e1a2d7ec4d3ecad8e93d91ba66f1f1d06c",
+            "yolo26_s": "b0986ce36c9b15d328a3399668dbc51c1729f17b33e10983b4c08438b6625857"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7716108913657755
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7580161420716048
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7079709710526745
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7008579481801752
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6980660574009797
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6964250832420259
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6938358720551566
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6856269940541555
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6820130393959245
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6761229427399134
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6462224678731281
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6273057192069724
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov8_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "c9fa116ad8e14aa2dc77756a166dcdb62215d46957f186512d7e819bd83262b1",
+            "rtdetr_l": "039ad14323505da865c9f5c766410a8a68b73e176c6106f66014e1ea073ad226",
+            "yolo12_s": "d57935bf7231e288322847789002342d63a18ee73878ec34280c985f397642db",
+            "yolo11_s": "3c56206cbcd59fb87be1e8599097a56a3d6f02aa9af328fb5541731c6dc1376d",
+            "yolov8_s": "e250c5245ab793ab6a744f7690782c69fff9d28c34cbd6a7037881ec9f03ad7b",
+            "yolov5_s": "c54d3205e8ba4f0a49e3122b3138565072e78e21bc0260282eaeb5bfd7305170"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6438566554388838
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6263763249325812
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.594814341814984
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5775906312091694
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5756853341589441
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5699544771277655
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5640413938363714
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5634049328742964
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5424863980718667
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.538846781103073
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5284808336774495
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5209986258462721
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "88": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolo12_s",
+            "yolo26_s",
+            "yolov9_s",
+            "yolov10_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "d6705400114527a457c2d89249d9d1f7fb98c22095e62a0ab247b612fae5c2e6",
+            "rtdetr_x": "3ea324ec1c3b4195f7db0d38c2c232d434950f5869630cfb8df05c4388093f95",
+            "yolo12_s": "c51f8a42cf1d83c82c8a96a0341348f3738c8290abdda51d97a92c2157b1f07d",
+            "yolo26_s": "e9fdb83a4a456eab9f6c3b426eeca983d74dd17b49451ce7eb0fb47d72a70155",
+            "yolov9_s": "62515a8af55d0ebc94d1854cb65b94de25648ad43029239d9ad902e0822e7c3a",
+            "yolov10_s": "e82ce280fa56ece73f10c005eeb9c0ff88c060a077a0906a04a29c439387a849"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6524525313999563
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6349114816445819
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5996847722059834
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5986598411419555
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5793496033327699
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5728521024312203
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5720588180502157
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5548017521556858
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5488690031044887
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5485170347218143
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5402765909774326
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5182385386547761
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolo26_s",
+            "yolov8_s",
+            "yolov9_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "927aad9544b73bf19ec4795a2423ac805a2afbf1bce24bfbbe55e4064692bd8f",
+            "rtdetr_l": "95724a545a821ee5cf48e8ec03deea189d42da12f50c2006bae463536f51c84e",
+            "yolo12_s": "13bde9c8188cfa3faa555e3f91f6c491ae83b796b8fe411c62f06a57b96915cb",
+            "yolo26_s": "67d4761cde484d4b747965a103e0534bdb80e1253ae46d7fcef712c46b10627c",
+            "yolov8_s": "295496ba6b60bbbcc635bb3dfbd8e53af9427d8a1a4cf11f3b72aa92bbe92cf8",
+            "yolov9_s": "e74e1fd39ac7631bd7159a4e055bc2b248fd26afe981b947d99b16d5bebff85f"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6346483577094532
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6274626799586798
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5979066212603575
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5768741916227083
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5760396087317569
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5727090233205699
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5720275646023216
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5634008398950432
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5513351893306664
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5312243003236189
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.518257104003063
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.513428935244377
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolo26_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "b4e5915e8ab78a80d47db33e62b6f4a29562f103a66a44e908bdbffb4cdbe734",
+            "rtdetr_x": "5cfe2a41a56c3f9bccf7af75ec1efd170d2305bed4ca27b221bb2f60f98fd784",
+            "yolo26_s": "9c81dd148fa0291507d5602952c0e67b44262e56c9f077cbe9681fb3efd2e843",
+            "yolo12_s": "96c4e46403126831e4fc3348dc176fbd25e22cd1d1a4784a7a38b29ef7b83e55",
+            "yolo11_s": "e8b34c13f20c3c69cc94c6520a48f9188ba2240cb9a792a0f33019a863771643",
+            "yolov5_s": "9f8fd9b3e1508090d99c1860fa829a5645134da9215c6070203c8ffb25629cce"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7606782003027236
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7571923044499068
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6985582926899934
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6959019249460613
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6928493672326271
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6923483414326203
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.687033381005225
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.682869049344283
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6751414684287355
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6743420374289696
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6526474142127895
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.624184186599961
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      }
+    },
+    "pretrained_aug5x": {
+      "88": {
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov5_s",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "c23afc16cdbf1ecebbebe89a79deeaf9407eb467e55b154e022fb6ab9800424e",
+            "rtdetr_l": "784e1225558457f94c1eb65faf17ad5cf823c69be6ae0df49882f0132e5e84c6",
+            "yolov9_s": "25621ae8f46194ce0d4f2b4d88485ea43f7272718514cea4fd5577cdfc5a8a02",
+            "yolo12_s": "2dd4043896d1e77c27b6d8f6f84fb947ad345e78ebd6b24630b7902f23122205",
+            "yolov5_s": "154b52100d3974ebb6fa6225414c6195fe26a7a8ec95dd9ce6c1bbb3b4348350",
+            "yolo26_s": "482267ed70625c6fb8a7e1b991cab9cf91b8ce1a780f91983a739ad2c5448912"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6675558505529945
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6467352751492603
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6165905205618667
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6039929413338432
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5998666892683847
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5973934432792719
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5939760162732938
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5936352268944398
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5847243869321487
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.567484929811507
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5644966927442
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5287796695120506
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "49c42a2b89dde45de17a60bb14e7622ce93192a5a05f6bcc2b6a6d81116a214c",
+            "rtdetr_l": "409758e45ad1aa0035ca427203b50d38818b925c49b1f3815ad8b9ac5a62e6a0",
+            "yolo26_s": "9604b2deafd3f72cba2e70032917be98c99e2994acb94a946c0a68ec95463c0d",
+            "yolo12_s": "365ef6e781018781a1102d0b80d7db47eb619b29579b2b9c24f90374288ede9f",
+            "yolo11_s": "780a4a123a2be10a86c2ae0f240c34fcb3faf11f90bb3fa28198d34e6db93ce6",
+            "yolov8_s": "1c4158ac99df2b078f4ce9f04ee01451b9f488477d28ef3b733009a2a0d4d0f9"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6867839567903884
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6813385137697636
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6351130540202069
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6329027642543773
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6282698521067571
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6171862601992625
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6125310269685629
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5990372564232205
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5939171350562786
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.589613395070685
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5836432677223273
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5382904331160772
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolo12_s",
+            "yolov9_s",
+            "yolov5_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "639e3c28f76b9d4f52f3f48d7fac46eb36d91bd5bd903a6662afc8f7b6cd29a9",
+            "rtdetr_x": "c28a4938b34a4d4c3c785d53e16382268ba41a9e12cb8a4ff3dbc2659f118b82",
+            "yolo12_s": "f7a797609ab62021e6e960455dac7added73e4e7b3cc50fbe9a389417786e247",
+            "yolov9_s": "9f479d05d677e57ed35aceee78e1f8d97ece306c14ee543d08218924db0ea2eb",
+            "yolov5_s": "f2bbce896392ff5ea19926b7155604c43ec021f4d4d0e2961c7fca134c0f99f6",
+            "yolo11_s": "1a437964dddcad371c0fccd4f931518210b8b0d6320c84ebfb141b61964e4e65"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7831222194860901
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7778902772120461
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7278338439607033
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7258081520235318
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7224932244643076
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.718179212811418
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7173826457105205
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7161061466296463
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.7011373207599787
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6917252056765352
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6877386715633881
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6579686003596096
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "123": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo11_s",
+            "yolo26_s",
+            "yolo12_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "31b36ae2fbef999c1a05103ce1ab253ca8f986f481c0c10848f07d9a46115afd",
+            "rtdetr_l": "56daf1d7990b6adc2bd13b469c2d3bfe9e197cc319ceb5254ee1057cc3f12381",
+            "yolov9_s": "f7c08efb7780d5ca7d221ba8f9ba98c653b2c43d63aa9618d0ab0d0cafabe7a6",
+            "yolo11_s": "4657a557f309e090cd28d509dca03fafa780d7f4e5e8f515a4cb8a71b0f2a90e",
+            "yolo26_s": "71505459e8b7de2868e95b04e86e8a22823b07be03f745c105129adeb222860a",
+            "yolo12_s": "9859f61a96cb1de8241960f16cdec216670f0917d87947769795313dd51a5919"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6773177745609551
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6702708391294039
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6392231120578161
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6317092310149075
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6242104266566157
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6202453051587895
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6191899038410653
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6184387246743579
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6094199793921333
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6012250823863996
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5706357197178092
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5352961573020522
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov8_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov9_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "28226643e9f24e7d989703de37b001fb0547cb52087dca39f1a7f9b2f606a743",
+            "rtdetr_l": "d2f058672c74a32102158bd3160df7a29204193fb4ee1435d5a7c53433227515",
+            "yolov8_s": "ce97ea70ce286050d7b78a5006c6d599533848a5772c11ca9fa41572207d1a25",
+            "yolo12_s": "6b7ed814a3bd1c89475216dbe47afd3ab8824c0a3a2b03bc5cc61ee79e03671a",
+            "yolo11_s": "167cf4778df16ea2b21a5a0e19dade21392e1aa006bd793792ff228013254e90",
+            "yolov9_s": "a598067bac0211edb9a94d5fba923ca4a30bf8800884603ebeb5f03551a70444"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6572547855353043
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6521775880448024
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6154307578994697
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6059496437963673
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6041633723973422
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6040389702164842
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6026539686752206
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6004846421201216
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5819351934550812
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5770294823952342
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5656534413679475
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5442677099939945
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo11_s",
+            "yolov9_s",
+            "yolo26_s",
+            "yolo12_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "259cc5196767d9053f33abfeee8271d702d89c754cd8ac1ace32abb8205143fa",
+            "rtdetr_l": "e9e0f5fb5c5ddc4d15da149cd0350a93a01d85eaeff03970a2ee2e5d8fb200b1",
+            "yolo11_s": "fd453c2fe885ebb2561e11161bad1b4030d40640a2db43c792a660d52f02994b",
+            "yolov9_s": "f5154654d1581a08a93540374e07d0f1a32537bd13a2cde142e724a4e62c5828",
+            "yolo26_s": "9666fc5400adaec20bdaeb315aa814dbbf33018c9daa433661a3e437e40e63ff",
+            "yolo12_s": "19be2ca458829f173388d7014c6fb9aad0df2e09352f4f65575bd7980158412b"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7751598139199259
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7661718973592067
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7378298363204828
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7327198820936227
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7233992038193722
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7229571721965717
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7213723655818413
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.7202942596968028
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.7189177678669598
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7086660858259693
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6872548049959211
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6509158954580814
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "666": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolo26_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov9_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "e4352d420df724719d43e319b8513db401fa5c801b511181660abd196bea0e67",
+            "rtdetr_x": "921cbfe9f48cf71fbce75fc5985692dd8bc265760911dc10f92ce40b21e75881",
+            "yolo26_s": "2cef98d05f9172001301095c6104705a44286c96a5f17acc2418be281f63066a",
+            "yolo12_s": "2ade0d63dd38634476b8f52ef66f80971f68297aa07f3f40032d412666f82466",
+            "yolo11_s": "639a113ff3ad46317fb076185e920e23f9a5122a9a20feab2ef30989a0d0cc05",
+            "yolov9_s": "85d751d7d33e3f5b95ad11a30ffcf073714d1b60f7f76c9061c28f4226860384"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.689274477594749
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6888921793079523
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6421586035274611
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6414463719431583
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6195645959587603
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6178004131709155
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6163585043770632
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6101728719038213
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6079383427943957
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5969215053570541
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.574501028062793
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5477171591358434
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "6b6a9bd94c6ebb5bff84cefa87a1dae7ea374f2d32d1afe0e8fa5178eb129de1",
+            "rtdetr_l": "4a7a66644c818d578f19ff97b8e0d8dcd307ad45aaa30481522407e0e7ba961d",
+            "yolov9_s": "068b0875fde5d3f9b3b20bb8af85d26978065a4b14048d5a5bbecc8a436775fd",
+            "yolo12_s": "0de7a1c2160e23c2387b53e9169f79ad6f6ae8c215f2acb81274d91c9b6a4ce1",
+            "yolo11_s": "cc16093af632d4179c1562edec35596969ed4a72cce311da2f9ff3c180049578",
+            "yolov5_s": "9ad55faee5c44e863cfdcad9a2e03e1c28e0def9af272d757da64d3128cc7248"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.66197925648305
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6613652012976567
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6060948364420592
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6045598664015543
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5993034497236127
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5981145970736135
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5967878928805562
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5909715732370686
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.579158395659482
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5705868025406008
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5688368499517038
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.522709986070463
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolov9_s",
+            "yolo11_s",
+            "yolo12_s",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "20cf4ecf62f58d260cf577f4c7c35c8618df95d7c4316b1d4d2e39c2eb68b4ab",
+            "rtdetr_x": "b86cff6dcb92ff539e793fa63657a7d18ea0d741ff2cb16ae305e1ffe76f8799",
+            "yolov9_s": "2bbfaf5c44e1249bf3e4e5bd8348b7133f3032d668d496ca252fddce542e9d5e",
+            "yolo11_s": "cd4bc2631331d1b347cb4675a06af826f2afd98efa7677fbf2df178b2d7c598e",
+            "yolo12_s": "1328816d8d9b9f8acfa790d91dd1ec6f93a1c2baa3961e86b27098df76d301ef",
+            "yolo26_s": "ff4454b5f789822182348c31a66550c3eb21e78f8b53a130c0c4b411717e15ea"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.772106330502939
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7692862105774637
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.738385525078495
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7364724546363303
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7352229635693208
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7317803672056642
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.718121526504052
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7177972415574047
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7173719880810022
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.7136336663499571
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6901634095000657
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6507440226612096
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      }
+    },
+    "pretrained_aug10x": {
+      "88": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo11_s",
+            "yolo26_s",
+            "yolov10_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "fdbf2371b27cd1af29a15fda593ae06e27e595aad4b18e77c86dda4498a41dcd",
+            "rtdetr_l": "5c96261b8bdc1ecf0d13bd043115faa9e1aa1ceb2f6c5fffde77b1653ad64ff8",
+            "yolov9_s": "2a662af9f4e2b0a085c0e244312e8e6bca496fe94a5525454af580e4e525da8e",
+            "yolo11_s": "7676023704105f50bdccb0ca68e8cb76288dda02912c6dcd065c47e05764e38a",
+            "yolo26_s": "d012639c0ab6e7cd1d4ede1e2b79ee29315293a7781394b5c5c58a542613a66b",
+            "yolov10_s": "23d30cec285e59ddce9632c83be8e4d288d6b25bfe0404f8e6664e664da49dd4"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7029470081360644
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6900223708733938
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6510566979252672
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6498523318132309
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6364062926882286
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.62821494261996
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6200791925950562
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6182164228145324
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.613167061348048
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6118469260617209
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5995027888031903
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5436202634783216
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolo12_s",
+            "yolov9_s",
+            "yolov3_sppu",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "421e2ee511a084ab313721ef26546fe535f4e0a776bc394a806159ef57eb0529",
+            "rtdetr_x": "f30097f476bb68c9ec5901d306f9d6126072bc7b10e77d9358f5f5687ca5e25d",
+            "yolo12_s": "9bfe9837d5ec0367a70ba011001efaa50ab28427ad6ee87acac6c87563b48e1f",
+            "yolov9_s": "65372b7f55e61fe7f330c96866bee5c2db79cfa1183b83351ae6c585fc557500",
+            "yolov3_sppu": "909374719d2d7feed968ae8bb999bcb353ed57695369ab88682c83fe959ceec2",
+            "yolo11_s": "23dab657adabd3748253215f8f565285379c5e20c2b245010f9177d1a554ff77"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6705807182465332
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6641646343124397
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6247582920953236
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6213031751820157
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6154678133756873
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6094667397542535
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6001700040685393
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5998158318272087
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5991434955104823
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.598300156981969
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5869214304466253
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5689265976217946
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov8_s",
+            "yolov9_s",
+            "yolo11_s",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "e0727548e9c577f0136b24bc18784ea9c04e6bd2b0ec0808ce18e036c2ee8321",
+            "rtdetr_l": "bd080fb73bb1b4ca52935849b8e1c51e394c7ad04f61e2bd4b882971442305d3",
+            "yolov8_s": "8d418a51107dacb7aff17d5d14d74a517829af9bf3afe50cfc76e1fa3d012b89",
+            "yolov9_s": "bb54cde8411ff186b67f4a8795692ecbc19d227075819705644024c971c9c81a",
+            "yolo11_s": "84820ce2f9bc22a1ef86e37c31d9fc7d3fd24643ce8d5be1e74b9322598469f3",
+            "yolo26_s": "281bc28578109548bebf1e21ece11c41cc2627ecc8097c902e8b75bde459b1ea"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7837938870652571
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7808034348618604
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7432720924854774
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7409618859512157
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7329886510658998
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7321335101943649
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7283089443118148
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7261240679777621
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.7260478563134989
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.7257511263279464
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6999749172984979
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6777148733745039
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "123": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolov9_s",
+            "yolo26_s",
+            "yolov10_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "7d1d429b771d348a8b1badc51689d77163f310ba623818efff558af475be9a35",
+            "rtdetr_l": "454c3fba1320176365d77c70b6608d826b93fe3146b7e3f1100c8ad681e42869",
+            "yolo12_s": "95c952d1590542cab1e02ae217a70a6a09f29ced825e23f0cf23fbd25e0c8651",
+            "yolov9_s": "8729105fcbd02de409bbc1e1e0d41d2469523043c2498f7187282a9419892416",
+            "yolo26_s": "42172744adeb7dd9fa47ff49a734ca0a6e2dc00a7c038af863ab61c8b0b322fe",
+            "yolov10_s": "e7ccecd39cf64ebf8ffc024e6fd8652832add73a8338783e8ee42f338624c361"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6924721476002084
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.683685212453138
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6450960949984764
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6416032091630766
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6296966130260266
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6267588418134589
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6212656258663745
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6207038799227339
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6158057417517695
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6153662570681795
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6126761094663826
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5438755529706464
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo11_s",
+            "yolo12_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "eb1335adc4c87a83e22acec1ef33ce6a80919d9f6b9ab551bd4cbfa225d738fe",
+            "rtdetr_l": "77af370acec6ef106d39325388157858f7ffeae003b1044ac0d8afb7b070f492",
+            "yolov9_s": "b10bf0d8295fc0a1363fcfa3466cd67e27271b32dd19b49fc777157755d6e4e0",
+            "yolo11_s": "1a122e2aec99f5a32002eadbd0a163928f3d9857dd5606505df70f1092b12389",
+            "yolo12_s": "aa74e5afd37f38b6bf10641a6c786267e5d11caec491827ca03f20d76fad30b2",
+            "yolov5_s": "49780f13b2b755dbf71d238fc49d8aa40d5cbd4583bcc78d9b6003649a4fae97"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6658646592109212
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6509920100689751
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6236814708554738
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6215398833181565
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6176404460882396
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6113896378280622
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6050467156850496
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6041905492455963
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6017656611321559
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5932320623065791
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5830519079828069
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5502953949193156
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolov8_s",
+            "yolo12_s",
+            "yolov9_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "20a20b9ffcc30ca99775a4d9553b26e6862bb2055562c28815ba829209b114c3",
+            "rtdetr_x": "dd378cc35551618684c85a61e3281e7f7528a0d6246399d99c67df1e49d16cc6",
+            "yolov8_s": "1f2713476ff17db71b13d24d82d8efb3d2cbb8c1b6339855656b429916703fed",
+            "yolo12_s": "14e96e3537068a8ba0b1b310a87a6a50827c1bd9b86720fa3e678008a948cbed",
+            "yolov9_s": "c3c7bf20fd09644395511712defed05b90444992633b035623c91fff75a6e2bf",
+            "yolo11_s": "5a29da15462a2968cad048c60050a9c2ebb2d6349db7a99f46e1acf39aa708d2"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7769950349510598
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7711890887909709
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.74189500792859
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7410472227296523
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7374552102182639
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7302371676923254
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.7276549706144746
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.7254767136294468
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7189296554517673
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.718154571163846
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.7036539245201933
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.660595509276475
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "666": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolov9_s",
+            "yolo12_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "6f077540a66cf4143652b68e9154b3931d0104a55bf96da9f1e8ed448fa7d3ae",
+            "rtdetr_l": "9d6c523c2ca515bb5514539f85eb35184df74cf998493df5886025e701e7fa9a",
+            "yolo26_s": "f39829bf3152e1f42535c2a540f783a4e4b81a7abcd805d1efb139ed1af619a3",
+            "yolov9_s": "a2ade4d2148cd32156c72b73a8679743f6e584416baaf231a3bfe6e369a9f2f0",
+            "yolo12_s": "a43d8ec38b68d64015d4bae4ac17d929fe30ee94957dad52a4995c1dbadfed35",
+            "yolo11_s": "203a5e245aa9824c1d48adb44b98892d96f23814d971eb4c47ac29d86fb54372"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6980067385143263
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6865905391307903
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6458295937147056
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6435992271288993
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6351227150789803
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6276873510983704
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6199461045974689
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6192723024010852
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.607707238732015
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5995913976887173
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5935730444455644
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5439052217529291
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolov9_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "ed3b0ee2d8b5011b91c19898f87f67ae2c9873f1941ae96fe34aa3043912b1e5",
+            "rtdetr_x": "d6c4c1a892a9c1b80fe6c3d29cf7d093544852657aa44e6542dc309e253cbd63",
+            "yolov9_s": "1ea131c7353f76f6fc292068f64dddbf0f9ab583c1f7b876d571429ab1c22015",
+            "yolo12_s": "daf5413db01c39c1b1fa98d38edd14995cee9c85fa64b59421496cfd8e16600d",
+            "yolo11_s": "79820a8b969fe38a607cd681aae9dc0d8f86e6a8c77c49cde8fb97a7bd2d5fcd",
+            "yolov8_s": "0d9c2715afbdd1ef59e1e43d3e5ea589f1fcd3005a4e14390968b118e09f9e64"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6624505453073424
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6612830185716748
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6231575565583546
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6192551699059188
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6182147500320373
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.611267060795104
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6011245452965271
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5975948049774567
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5936813908131631
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.590472439378962
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5843690286385119
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5470205264032773
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolo11_s",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "896f382e3803657c05e352163b94993e86e83b3446c4f4bfc6589664b407250c",
+            "rtdetr_x": "0885b756de31d5b6623a004bfb7d95d8f41280cd18d1256eefa8e71a5005333b",
+            "yolo11_s": "170f183775eacd4b330758f417eae25d36d8d9d99a23a55243190bbeda65b33b",
+            "yolov9_s": "c4d861d0abfbfb6a91a98a6eb9c2f345034ae6266e39cbeb33a4c986e66c1a05",
+            "yolo12_s": "fe0fde139ad21c0e16866e0041e0bb0095c6f7c5ff2ba77c13333d240ceb7f84",
+            "yolov8_s": "919d5f5c5857aa28db18dea9b0ffefcaeb58a8738b79a7837578aef482420483"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7748908802978604
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7747323460432953
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7518366421150143
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7457117633369709
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7455260810510096
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7319268595449371
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.7259175360670126
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.7222192906252562
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7178895318632301
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.714225922473364
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7097781739626388
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6609921893953203
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      }
+    },
+    "pretrained_repeat5x": {
+      "88": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolov9_s",
+            "yolo26_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "478225d6faeb7f84c74a2d9b56f4b2618615761e5851593708de303ab9427391",
+            "rtdetr_l": "138ecec304286b8d72d1489ec6b71c77a324c4156c7e956f1ec13f6d76b623fc",
+            "yolo12_s": "fa6541b137c3bba69bad0f7dac56e35dc278c464dfedfdd08c1710f450d89919",
+            "yolov9_s": "925dfe240dcdd0513fc4d4025b61573e3f095accc131ca90ec0247f75ad3d5ce",
+            "yolo26_s": "52e1c6dec8edf41f44f6fcf248c4a208fd76a4ef22fdf8703c0b5421205166d7",
+            "yolo11_s": "b2723814a56b2ff33d3c861b40a6f50a752b1d8485a7a8462b55039cdbe83430"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.650647820755898
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6471664444973162
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5885679595282968
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5854861761743095
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5801104863340985
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5780281264546069
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5710122445692553
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5552858785853826
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5362583310026852
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5263511672127371
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5209580679869845
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5062044864112083
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolov9_s",
+            "yolov5_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "97361f9ce56defad803017a23294920ea2eaf3500ac0f8b740a64c334b1226dc",
+            "rtdetr_l": "bc73b6d444f72996654e67a8fbc667c26ef0bce1ae3302ac9b0e7be92d61546f",
+            "yolo26_s": "19c88a2450b53214226d82f778d1301f7d5274d7be00cbcfabdef14aded65471",
+            "yolov9_s": "4e65721c495ab41267f0d996524803b130083972a2b637e1f8fdcf5f2ebd4281",
+            "yolov5_s": "08ddbe36df08f2006dd10a59b5274c4d60daab606b575cab829dc4f251a34aff",
+            "yolo11_s": "cbaa272495f1380f805551dc59ac62c4ca8c3e6ac93a36d35f595309bd3b101a"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6402317963139723
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6288735367170242
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5881377364966887
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5838186121649583
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5783967795042753
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5770818449586489
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5694406323394106
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5650218252577924
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5476297417027075
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5321504192399913
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5318447314962109
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.508629236706392
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolov9_s",
+            "yolov8_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "67073d2392a260762ebaf598d7ca3c46b87f14415393d00f88000ffff6f07bf3",
+            "rtdetr_l": "361bfdede4998bcaa03010286768a904ccd69a73d892ab71b1a5394b421bacef",
+            "yolo26_s": "699f1f1f5cc5d46d656f82875be201d5942fd4772762281ff1d357c99f1f894a",
+            "yolov9_s": "4a7c10dc538832e5f4389cb9009903e433e45536487c361388188dd6e664f84b",
+            "yolov8_s": "c0a9c223ea1d29259b63165bc09e2bd002229a67385f9b383db99f77e3f0f825",
+            "yolov5_s": "75c55461bed61878eb480b0a325ba389b2762e383c1f3436755d4cb0c8f497fc"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7552151571473347
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7379770331481862
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7049459793755077
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.692918468522367
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6926907513516517
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6820468631384515
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6804568579796968
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6776016012840133
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6686378753363239
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6583943081587675
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6424450196548526
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6176132446478106
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "123": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov9_s",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "23b4551ae5fc57f085e6cf52ce98e266f4afd6bd5a4733c132a4f7df5cbe1243",
+            "rtdetr_l": "2cea137d82293642f1f31f3270a0f8ad555e3557927fa09344878b8efb520279",
+            "yolo12_s": "0b6f8966442e24667fa4d64daf7b98b8ee6708247d739cf3a057c930663dc8f0",
+            "yolo11_s": "e065d562e5ea81d0f5666596565398ae95aa0be89f8d7cd0c8aafd1562cbe8f5",
+            "yolov9_s": "f800a61c5e52e1c86c3bb6df6e6b4d3854526e431bc9f018710ccb092e949b9d",
+            "yolo26_s": "bb5fea0a10e0587e460b55a566544731732d83069146a0caa800b725a0f41d8f"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6362932303584085
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6283336055602028
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6005960585207175
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5916512074392631
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5884821287329174
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.583840532607197
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5720790169661734
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.55384459710381
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.544252175706265
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5426430012609927
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5128424855311795
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.49785712442793384
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolov9_s",
+            "yolo26_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "bca4ef234a7bc8b1486a0e77ab442de790b23f7580ccc41106fb1da52ce03880",
+            "rtdetr_l": "c7904bf3bf28215be454c86e7026046a63f489fe73c4dee35d2a0e3333984b09",
+            "yolo12_s": "e467af5e1ddbf787e885b05b3b304e53f19a46c1684a884162a026c87744bd47",
+            "yolov9_s": "2a55fff504df4c5b5f368ed41816bd1099175573fde7618dbb828fe66f45cd57",
+            "yolo26_s": "f6ecca5e68616c6c5b465a70952725d4122eb046303cf4cd37ea681477442f6e",
+            "yolov5_s": "d3abe64a8072c90f3f169e5d728254e8e5c2023394fd92969a65f8f1a6f6da70"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6459988997089345
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6327438720499008
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5835265116622015
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.58106698773151
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5787648756133507
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5738130075216967
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5537859341365664
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5465333671277444
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5455594336287708
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.51976429333442
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5175917217179923
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5073404853900534
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolo12_s",
+            "yolo26_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "f1383a9c57874bff99bedb6d69691859a5ab38cd5602637da86ef8f916b28a6d",
+            "rtdetr_l": "5b691a5464aed88f1dd102df031957127b96379c4604d12cfc2d266bd77cdec7",
+            "yolov9_s": "9a5921f5a6b86a1972f172c5fc33cc84aebfa222425578e00f198a0836f2a80d",
+            "yolo12_s": "4b5ee0b19b316d9602fbbd7f13aa078a13e212abeceabbb6efd2116796130d7e",
+            "yolo26_s": "930dc71ee4d4d2daaca69c486fddafa0678890b1d4a7aacf46f4d612df5482d2",
+            "yolo11_s": "685a805d461acd00355089b8ae6ee4c8058feb1c597bd68bc8767930e566853b"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7521922909487457
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.738892421395954
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7007513824367848
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6861808389268632
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6856859475843178
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6839093363649594
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6778649310589232
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6709420962797087
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6668114480448802
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6578108184937277
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6564467092776745
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6135692591067194
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "666": {
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo11_s",
+            "yolo12_s",
+            "yolo26_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "dab1e04f186f51499dd93df6de4e2f3eaeec948985cd1d471c41e0e070f7bbde",
+            "rtdetr_l": "ece77677b4a420d59623b55209a351211bc0f4b7d1b94ce77a8ca5ed77b7b689",
+            "yolo11_s": "5fe911228fc50bcb2a1720d31fb3e8308966a3d46bd8d3bc264e26800071bfa3",
+            "yolo12_s": "b8af2030988485a042ad0360b6a5b64fab19aa0a62af93ca7c07c118df299691",
+            "yolo26_s": "17f9dbc2ca0da9bbd20275cf3d2b9c2a26c3e51a412547c6341e72471f48524d",
+            "yolov8_s": "3610a08ac86aaf6e4892aaf746cc5c3065a07e7b0260fab2496c01196e6c4b7a"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.63327261696499
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6296757012685241
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5868362857536671
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5702583711189988
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5659066410480127
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5658619230472165
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5642044036004558
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5600523241127537
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5379744130451016
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5305597974775649
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5173497867954653
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5131834978456071
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_l",
+            "rtdetr_x",
+            "yolov8_s",
+            "yolo11_s",
+            "yolov9_s",
+            "yolo12_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_l",
+          "selected_checkpoint_sha256": {
+            "rtdetr_l": "e61bbee2a8f3583ecb8b1b05223fa84d166682f1f3e5bf15ea666f103e81e235",
+            "rtdetr_x": "7cdda6ddaed2541c79758fc6fd2496f37cc5122a5beb05c8803cf5eaaef6d29c",
+            "yolov8_s": "d8ba936b77c2829bc27f7bc60bf2729c734551302e5ab0a7cc95352a3dc755d5",
+            "yolo11_s": "06ce6bd58c77cb0d08208d6e01709f861143563a491101af8828724119ccde78",
+            "yolov9_s": "6f03072e59782f954178681c6df0ce19c9f8278452aa2722ef1e52bdcc60d9d5",
+            "yolo12_s": "0c481d7ef161baec627bb9f99a8d2bd2b721f6594ecb8360c446b3dc286fa193"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7576335982528524
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7389609994362768
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.699281217068328
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6961292162954686
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6936560286435984
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6903393128158022
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6740003804010147
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.660093939650418
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6598774702951802
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6583030026640884
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6430786932722865
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6187470233628818
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "9ddf9d7faf7582dec57b1702c01496d014e3c861c110c8956af0780431db54b1",
+            "rtdetr_l": "d5807ad087a8cc2ed126477fa6ae4d1e4bf2b58a0617063ead748e49e209430a",
+            "yolo26_s": "18a0ce717e4ff303428260d7e580b6c997f9e7342fefd4932881a14ce2c37997",
+            "yolo12_s": "93f5e669343a2ef7cb58a8859a44369884202a4869d2722f30e0b16eb150a1f8",
+            "yolo11_s": "90124611dcb5156578b67f47d48fc7e124726a63309b2343ffd7a4a03d8a9f3b",
+            "yolov8_s": "d30364305ac36b44ec56a8eaa9ab21a0087d96b8a2e40a93fc32b7baaaa7eb14"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6426611528510657
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6315317437211923
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6270122134254809
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5929231268459618
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.5695697320604616
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5606831391197346
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.556889963396525
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5560718300009582
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5550755314819036
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5449888571968071
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5299921392562102
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5041630239153264
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      }
+    },
+    "scratch_base": {
+      "123": {
+        "polypdb_wli": {
+          "selected_models": [
+            "yolov3_sppu",
+            "fasterrcnn_resnet50_fpn",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov8_s",
+            "rtdetr_x"
+          ],
+          "best_single_model_on_validation": "yolov3_sppu",
+          "selected_checkpoint_sha256": {
+            "yolov3_sppu": "f25db7f0d9e1a72d862fc463c0c7f178ee935c7c68249ec9d8dcafd8bf780853",
+            "fasterrcnn_resnet50_fpn": "30ca7517c5f7372d8268554f2d0041ffa81c7a024d1f9621879da925b87fe7e4",
+            "yolov9_s": "c0e56d1ee80c0d2200b356f2f53850a72d00efbd52f245fe5e9e0eb579c2662c",
+            "yolo12_s": "192dfab6ee94ca599e9043d59fa787e3117b48090fd738f84bf9a0750ab8b80c",
+            "yolov8_s": "40c51dd891dfdf201d15b342aa4fb9ae7f0412b067493419aef86e2abeaa53bd",
+            "rtdetr_x": "cb2fbed10703a75ff6a357abdd420fee2388d13c1cd41da26b3d9fcfa5c08eaa"
+          },
+          "validation_ranking": [
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5418509784848681
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5012804729725969
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.48162626135623937
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.3929875125362726
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.37116087894999605
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.3618200823936909
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.34731159051715543
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.33810571936244427
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.3166973731985043
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.31461169476519946
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.2623955196595099
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.24442450296114707
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "kvasir_seg": {
+          "selected_models": [
+            "fasterrcnn_resnet50_fpn",
+            "yolov3_sppu",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov3_tinyu",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "fasterrcnn_resnet50_fpn",
+          "selected_checkpoint_sha256": {
+            "fasterrcnn_resnet50_fpn": "c2dd45e502e2bc4284f4eb4ed825322701317e37d0b09e2f9b5b2b305de0990a",
+            "yolov3_sppu": "96a538252b14d59125a815be955f92f5e26245091836cd4ea41fbaf3e7eb788b",
+            "yolov9_s": "47dc395a11d83f3ab2fdb9f580640d120ddd24c54aa547ffb85e979685964fcb",
+            "yolo12_s": "ea4ce625328326a24e2f3dce0e49573024d9345072c36f6af4279c96bf39f4ba",
+            "yolov3_tinyu": "c764622196e77b41da4d437909b7a2e891a833bcdfe983839a4eea7d706e1e55",
+            "yolo26_s": "08ddbe9bc7d856f693339ec712eabfc232074edd2d8ce99bd4628544ce201d31"
+          },
+          "validation_ranking": [
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.37565025976252586
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.2971344144399457
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.1433844947603586
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.09316273839124295
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.08446269860621824
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.06047285718587757
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.04326421647761158
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.042990761084206866
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.03641538144475365
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.030111070274583103
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.0212283771113671
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.020567912912331322
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "yolov3_sppu",
+            "fasterrcnn_resnet50_fpn",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov3_tinyu",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "yolov3_sppu",
+          "selected_checkpoint_sha256": {
+            "yolov3_sppu": "2e4e91d332cda9ec763016fa39a65aedb8644c1479cfae71899c3cc910b275ba",
+            "fasterrcnn_resnet50_fpn": "143f80d0586c593c9d65fb605bccf3605456010dc702d78fcdbe77719d064456",
+            "yolov9_s": "70c84a617796ee0a24af3e8620f0afb500ed60e393b7d7ad8c198dc816f22a71",
+            "yolo12_s": "b32209696088f2e6a0dd5664fa5e93a81d6fbc8c0e1c6715f40332270b852f59",
+            "yolov3_tinyu": "ce1a279b7c4a969b963097c466ed99e2376a677ec9f4b318d56a63fab0c85b43",
+            "yolo26_s": "c461b4d44774b468c78490b34056c6fca60d64e438b4190b93d2cd5a01b9e0d2"
+          },
+          "validation_ranking": [
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.31986990327418463
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.28356481945142603
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.18254147875557253
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.11493427456639001
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.11007588086587894
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.09380214152339633
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.06689000152432456
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.055678945290511206
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.036015467668779375
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.03447064940095294
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.03343682033415689
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.03264182499184265
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "88": {
+        "polypdb_wli": {
+          "selected_models": [
+            "yolov3_sppu",
+            "fasterrcnn_resnet50_fpn",
+            "yolov9_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "yolov3_sppu",
+          "selected_checkpoint_sha256": {
+            "yolov3_sppu": "3d82572cccb3886ea2e1f0615027c8632a301b56da39871677dd5a6872ef80c4",
+            "fasterrcnn_resnet50_fpn": "6344643c412cdb20da87d7898a14ee595967e015c588064ada1e2fc5359ced46",
+            "yolov9_s": "6e10d05b63ef04dce295c8a624bea11c73cd2a4bbc1abfeaae2f3fbb503eb768",
+            "yolo12_s": "59fd2ae5df3d5248f71fd2743b0fe0ae255e6a1533f53a3cb5fd12da7e989700",
+            "yolo11_s": "e9f2c58b41b899cdc34480ba52a9839faf57590b07b4b0f335b29a101c6dbaea",
+            "yolov8_s": "101a01eb6ee72d8d7717c22cb20c9ad3e61d31f010f22e6f30e0ff5555cd0109"
+          },
+          "validation_ranking": [
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5461309048878531
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5107002563643278
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.47529423902311424
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.42419697442024795
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.3883169339851446
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.38286343235139764
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.3700586446616243
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.3263688626357174
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.3257332980206019
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.282784292119665
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.26037625591653446
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.2595368270802378
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "kvasir_seg": {
+          "selected_models": [
+            "fasterrcnn_resnet50_fpn",
+            "yolov3_sppu",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov3_tinyu",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "fasterrcnn_resnet50_fpn",
+          "selected_checkpoint_sha256": {
+            "fasterrcnn_resnet50_fpn": "f90b59a1ea1224b91c5351c468623db4fa959c51acc7e2fec903e7a4b955ecaf",
+            "yolov3_sppu": "8bb19562894093052bbce8b6e5538d75f386d0bdece4d6515fd779eb5649afd6",
+            "yolov9_s": "2914b6dfb022602749cbfdb80863dcf2a771c17c500b6c06c8af80a0614bb62d",
+            "yolo12_s": "2f46df0c3ba8d73146c2bff4319104f5bf106bafddf493374ffd6cdfe6927be6",
+            "yolov3_tinyu": "4e9c118ae71118b482941257eb4a574bb2e8b21e85f456e38e4c0d7a78f31999",
+            "yolo26_s": "96af76a3d621d9d7ba799f51131378c290ace449789d4389cb75f7e98a51da2e"
+          },
+          "validation_ranking": [
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.3735215057502975
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.3094747158274537
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.130256903696365
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.11364073629239044
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.10580427804943608
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.09354560634633176
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.047286905747983964
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.04387964282897075
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.027751106238686866
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.026847017151702644
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.026154573493703658
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.021229023397968436
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "yolov3_sppu",
+            "fasterrcnn_resnet50_fpn",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov3_tinyu",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "yolov3_sppu",
+          "selected_checkpoint_sha256": {
+            "yolov3_sppu": "52d6760076a433b63b52bd04912beef3fd7b84608fac56e9aae01a070ff80134",
+            "fasterrcnn_resnet50_fpn": "034adfe8a49b9715ce9f2851e4e767fc92dbe30cfd0f5c10eb0b8de1976e83af",
+            "yolov9_s": "3bb9a7dfd5a139bcf78537c7a0c00fc04073e6f2bdb652e11c85a977f752b530",
+            "yolo12_s": "3e77ed903b8de4dbf7d0792e359d606d411dad0fc5e0d0bd60f0b9df85b2b316",
+            "yolov3_tinyu": "8e2131f6ae06ce329bb049f645e8b6542e4c5eee3ae47f1b6da0d554eaca26a2",
+            "yolo26_s": "4d5a83654e954b0c41c6e6088767b58583dd08f3830fd9c16621c2f33c18aed1"
+          },
+          "validation_ranking": [
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.32840174919390563
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.3061344306781547
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.20115795947668
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.16372321601746978
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.1103731224199526
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.09485232942258079
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.06537107981170119
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.06430584509059904
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.05439630129580336
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.04828555621525116
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.0324008053890827
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.007362275725159883
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "666": {
+        "kvasir_seg": {
+          "selected_models": [
+            "fasterrcnn_resnet50_fpn",
+            "yolov3_sppu",
+            "yolov9_s",
+            "yolov3_tinyu",
+            "yolo12_s",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "fasterrcnn_resnet50_fpn",
+          "selected_checkpoint_sha256": {
+            "fasterrcnn_resnet50_fpn": "05a4437ce9fc87f95b5b6d7d21c0387ea8b86564df74ec371f8dc5b73daffdba",
+            "yolov3_sppu": "015ca6ee17113e2d606c62dc109d7113ca57fc9e961f902dc947b767bb55d252",
+            "yolov9_s": "e97258f140a543eac801284e797a271244f808b2e6c9e84242c54d340ac0ad3f",
+            "yolov3_tinyu": "696e266f38c7cf0a9aabbd875c2bba47073be2076c42e482fc764ba4ec7d8cbc",
+            "yolo12_s": "cb56435f242ce8e739d14fa03c9c4ca3ae682357a7fe4c95d0f12d3264801d37",
+            "yolo26_s": "3dc603bda9f79f1b0fb3f5b5fa1e9bf1aefccd1f29ccb3f7508682b5f6b1a236"
+          },
+          "validation_ranking": [
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.37327027728954004
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.32562959515604234
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.1302072585386453
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.12005020757948452
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.10963214782994049
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.061444286781483545
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.05740904701957317
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.03634143375413591
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.03101403292909054
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.030399205446156402
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.029629216237878696
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.013869138820127209
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "yolov3_sppu",
+            "fasterrcnn_resnet50_fpn",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov8_s",
+            "rtdetr_l"
+          ],
+          "best_single_model_on_validation": "yolov3_sppu",
+          "selected_checkpoint_sha256": {
+            "yolov3_sppu": "b523ffec529607ec145096564348d2c07f0550927450935cc3bc776894206699",
+            "fasterrcnn_resnet50_fpn": "dab49d7de31e94c09fa301ec0e5965911198e3c621759c141ab9ca1671aab92a",
+            "yolov9_s": "1514fd894f3d570f3c5af30738b245f6f60fe83fb72b05a436d4f62748941511",
+            "yolo12_s": "f0d3e196d5f573fb7ced0557eb5eab8e97b735da2f8b2f7835ebca3d10299f2f",
+            "yolov8_s": "612b5bd8f47001626949df6bf3692d7ca4fa858e7b5b59401d2c412249579f54",
+            "rtdetr_l": "6ae77f93c3e09c95faee8bdcfc31c20b8a769404bb9d4a1b20f19b21d4aa6af8"
+          },
+          "validation_ranking": [
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5242150479267386
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.4994671477891507
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.48177554021513436
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.3913048446221866
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.34611949312234586
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.32950332919802816
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.3278244044939568
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.3257098033230587
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.32031761644960677
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.31040692922248103
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.2722422945139754
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.25514517947619625
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "yolov3_sppu",
+            "fasterrcnn_resnet50_fpn",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov3_tinyu",
+            "yolo26_s"
+          ],
+          "best_single_model_on_validation": "yolov3_sppu",
+          "selected_checkpoint_sha256": {
+            "yolov3_sppu": "de36dcfb770aeced2d571f026bc158796e050e3ed04189d88795f279fd01ca56",
+            "fasterrcnn_resnet50_fpn": "8e406605e428e5ec39a0ed2f06b14f6f6f49ea90727aa4757cab4192755ace96",
+            "yolov9_s": "8b9c2948cab8fdb8dc01e1241b3ce95d28d026fa6125a2b12b6e530ca4867cd2",
+            "yolo12_s": "ba15e272aa6e914d86671b257da34796353fe65a2f9c65d9157294bb9f8487a5",
+            "yolov3_tinyu": "050b7c70c01e1e7d7d5984f71e11d5be5875074929aba249ec50ad436d20a865",
+            "yolo26_s": "49a5371be0c2da3c319918dbb630f00384c6d29f48cc6cc14dad865f1abf7c99"
+          },
+          "validation_ranking": [
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.3240573175916105
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.32231247661750917
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.15910489815366918
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.14029620182643407
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.12268689739735236
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.07860927071010262
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.07402590165550536
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.07147932046493823
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.04722689760086315
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.042585424039534095
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.03868715320016814
+            },
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.01694921978034111
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      }
+    },
+    "pretrained_aug3x": {
+      "88": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov9_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "4ce3ab6e290d56e54ad76246633c1b427207cb067824518b417c7cb384721bb7",
+            "rtdetr_l": "4f2eafd44fe0c02faf7d8733f62629b0ce89a6aeda9267c75cbdd679c94ba42f",
+            "yolo26_s": "0f5bc11b5807e8740f169452ca0f43956a5cb8fed1bbd21617854e9eda0c32e5",
+            "yolo12_s": "19d903371af3f4cd339644740c6791e04394168b0112a3dde7c4e2066353c013",
+            "yolo11_s": "e8642cba148ffe19ec51f7148b6f36b3f7702fc6f654c2b03763e05dd5691125",
+            "yolov9_s": "876eefe6d3380710538c11bf1ff072fa6047c703dcfcd8f63d14b2e54d742840"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6794894478219831
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6623388449311034
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6273213232738357
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.621994536180124
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6143499205268809
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6004012751328374
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5891333605049357
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5804958984806439
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5790473323039987
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5685254692839744
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.567174383001168
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5365487340606112
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolo11_s",
+            "yolov8_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "825331577f1b81b73b7057f662cc82ce7e2784fdb3a109ca69afd00409aae217",
+            "rtdetr_l": "f8ecc5da66d0c54fec59a6abd0663e1cf7d97ecb668821553e70ded20be7ab4c",
+            "yolo12_s": "4a33e208c645047603cdc1e247d6fc7607504bfcea4dab797fe2d1be4fa6957c",
+            "yolo11_s": "0e2be0d57b6876a798102d45430df3552e76060102a6c5ffca07c9756bb33da0",
+            "yolov8_s": "d7dd4f18760ee5cd9cf181db333b8fd54e45912a5c48e3ba5086c9bc0225fe11",
+            "yolov5_s": "da7adbe28ffe2dca6b47da5236bcbedfe1931e21d40b5f4cdc30ca72f9b3a0d3"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6580460286688388
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6540802268630621
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.61020503516859
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6014560629241966
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5973387062075719
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5972511501715054
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5970854751610163
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5952375976055773
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5734549847662083
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5638326030676085
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5573867152058722
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5252234299140783
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "565b72ad776eaaa1fbabe3ae5db72b541247f371dc72f530b3711e57a215c18d",
+            "rtdetr_l": "c46124b976a8fc936c8b70b65568439460c993e5e731a167131c9137352931a7",
+            "yolo26_s": "abc9e67722b6f61e25d7501a6c7d2202af2f87a2f99d3b7f190ed6ae362e1456",
+            "yolov9_s": "1dd47c448aab57a603742d8867496d8299fba852b40a98501329c2215095d3d4",
+            "yolo12_s": "177c12d927bfbca73f0565cba318a94ea6d0ae9d0635bc724a94a0e21c39aa07",
+            "yolov8_s": "b666aae881d7474601281865da208fdcf7ec11fd4bf2336d6de19590d1df0ea2"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7842625563004038
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.77463947440915
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7225091683658409
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7224657453869872
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7151344025318864
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7137566299281989
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7102405886507417
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7043015071366256
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.699802796657636
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6973569158418405
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6636232273170133
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6448832445423156
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "123": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo12_s",
+            "yolov8_s",
+            "yolov9_s",
+            "yolov10_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "54a08c78ca0fc8426deb45e73412e4b601f49f022cc583664dbcf9fddf282216",
+            "rtdetr_l": "50f990987c079d6f4d79f601a18a60a0ac8b6d69337817c6d20fc8b6e7c89d5e",
+            "yolo12_s": "0fdf1341cbc41ac562dea4c085a82324da30be5de9d917a4fb46f990b6b09b3c",
+            "yolov8_s": "fd57d1287afabbe95f4111e15f3b2d351aa0247450124425f6b4e7e5f063b93c",
+            "yolov9_s": "0535e8b282e2cf5829e03fc54ddb37f10488186ad8f1ca2d579809efaf789a8c",
+            "yolov10_s": "587ed5442d3e1579513803287ec1f49e44cfbcfacbac06eb8dcf975fab9fc585"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6762749255620061
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6532562206662533
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.627098225480005
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.6070290340698132
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6055831707329551
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6037684741363522
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6012570736718585
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5915215897219028
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5757237593441343
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5720233330928226
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5626679286320405
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5348256308009396
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolov8_s",
+            "yolo11_s",
+            "yolov5_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "312805823744130238a0282dda314999352b5bb8d1c35b723d56c1422fff5ed9",
+            "rtdetr_l": "99fab3ce6e19d132d91915c35ba1b459ced67a6d4755d452f31caaa0f27937e2",
+            "yolov9_s": "4c0a962228599b34375ee076236bcb0ca02b8c206f18508c9830ca6bb5820ddb",
+            "yolov8_s": "82a21fb818c42f984bc41ddb32886433565bdfb6e09c56b395cdda9a44892497",
+            "yolo11_s": "df6b13c526e27d06d9720c3f25d596640c9a3638e8b66cb969242174daa513a9",
+            "yolov5_s": "3d98ebbdcd07de8e52cd8dd39e49bf1f049516784e952e0fba949797442dbe8e"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7864635479050461
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7702977205132142
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.728511767395722
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7222200034287404
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.7221918257435636
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.7170920796264542
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.7125734576186916
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.7072969612286053
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6975382726083421
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.6961432106151141
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6684224500366635
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6417443200432197
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo11_s",
+            "yolov9_s",
+            "yolo26_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "c4c9a7a229eed2da0db4560b68469fc07ff68825ad3130cbd7e6886ed4537956",
+            "rtdetr_l": "a960bc8bc35827a4e8e493383fa8a8874f49ec155b675b4c030e121aeb484d7a",
+            "yolo11_s": "0795b34ace30af08d4c245ca4d6b0fc9b5b5b5b7f0d0483a18512acd51e45596",
+            "yolov9_s": "8064ad61b27f5e1daf9b76086ee13429c7d7870c5cb4a046afacb70a19503895",
+            "yolo26_s": "a6194142075ca26f5aa15e390666e10980dbc26e0e83b97cdff6c6e762d7246f",
+            "yolov8_s": "d38e56ff6234a94738a7383e5d6a05c63ba2e57e18d288bd3feb9287d6708dfa"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6520529653521385
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.6430489978875568
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6096525516913018
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.5999139919361021
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5993836099394809
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5971972970585904
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5939667488978314
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5885931803328707
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5845971642789667
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5692182516270574
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5586904404216785
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5202427824669207
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      },
+      "666": {
+        "kvasir_seg": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo26_s",
+            "yolo12_s",
+            "yolov9_s",
+            "yolo11_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "7b5adc4679a6944d424f6d2b5c75d17484e4d64b2e8e886bb48cf24862beefec",
+            "rtdetr_l": "3bce6556a8bc9a5e2f629dfa5a74bc1913211d91dae7d50f3161085c186e837b",
+            "yolo26_s": "d90a1b6fa901ffbcf6de7bd57545d44faed1e218de188544a906576244b5b187",
+            "yolo12_s": "d12c0713719f3cf8a3d724a5ea40ef90f1efa3ae078105fed0dbd98b61c24605",
+            "yolov9_s": "7d03a131a225824bb0ee124477083464a9aa5ee4c2a24f52c4ec85627f942e43",
+            "yolo11_s": "18f8421b605cce4d6f83a6b0edc27c5eff6e529ffa55b7975a7979f84ef503be"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.6671070337504827
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.662410410882201
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6334152019190435
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.6304835923085599
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.6115990774899055
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6082091931207654
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5969823022624087
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5962758495540098
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.586971893847739
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5711336465524962
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5633115786012236
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5473975365576562
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypgen_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolo11_s",
+            "yolov9_s",
+            "yolo12_s",
+            "yolov8_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "1e913798563a4f0c28b1970b9b099c3362d0c2eef49f91312eb979aa7aff0913",
+            "rtdetr_l": "b928283e7102c6ba9fd94e1964064f910b42402bee8ed5e1f0ac87725fe5797c",
+            "yolo11_s": "5282ee5ffe2eb165c46229356085a7bea78d8a2e8dc904ea0b5d762e1cf09bb6",
+            "yolov9_s": "ab395917b98a5ca9d3734cdd59c314deed995d8e287e3e71d0737692498fa7fc",
+            "yolo12_s": "8a26d13704730b60dda1d21176f3382c8f05bdc25fea2c8e826a15a51822a260",
+            "yolov8_s": "eb4c9f10045ccea7b0c0dcc5c01f03843edc4584bd671eba88029021f59e7349"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.650090751253421
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.647546338349048
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.6036887728242062
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.60290873224264
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.5997560939038418
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.5879396206190107
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.5781920852197343
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.5705660788649654
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.5670567335154357
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.5649797319525427
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.5627794558684313
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.5225192069386939
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        },
+        "polypdb_wli": {
+          "selected_models": [
+            "rtdetr_x",
+            "rtdetr_l",
+            "yolov9_s",
+            "yolov8_s",
+            "yolo11_s",
+            "yolo12_s"
+          ],
+          "best_single_model_on_validation": "rtdetr_x",
+          "selected_checkpoint_sha256": {
+            "rtdetr_x": "2437f783f069e93d8d91f7a78a0c3e22e9ad9e0a57a337ac5130d1c5914c07d5",
+            "rtdetr_l": "d8715ef310014fce5c4648ced08ab390b33dcdcadbb6834df9ca9911f27b07eb",
+            "yolov9_s": "1923dabb5619272b762c572d65bfa1b19c682fbbb8ebe99e91ea2a4379f54b90",
+            "yolov8_s": "431d7a90bcb872daffc3df2a5c314c22c14252131e9b0157b2a3644e0720463f",
+            "yolo11_s": "c3f10a903003b913b4a177ac98a54bd9f5cf70826a276575e3d5ca1a53cbc15b",
+            "yolo12_s": "575ca2a4632b4d9ac502e9f0d65d38cc2cb556f75db43002bdefb1c97fc9a3e6"
+          },
+          "validation_ranking": [
+            {
+              "model": "rtdetr_x",
+              "mAP50_95": 0.7757487294693737
+            },
+            {
+              "model": "rtdetr_l",
+              "mAP50_95": 0.7710564024321224
+            },
+            {
+              "model": "yolov9_s",
+              "mAP50_95": 0.7313162207692404
+            },
+            {
+              "model": "yolov8_s",
+              "mAP50_95": 0.7244236352284487
+            },
+            {
+              "model": "yolo11_s",
+              "mAP50_95": 0.718454788761423
+            },
+            {
+              "model": "yolo12_s",
+              "mAP50_95": 0.716452205616079
+            },
+            {
+              "model": "yolov10_s",
+              "mAP50_95": 0.7032780211552961
+            },
+            {
+              "model": "yolov5_s",
+              "mAP50_95": 0.6951559495402642
+            },
+            {
+              "model": "yolo26_s",
+              "mAP50_95": 0.6937229494591208
+            },
+            {
+              "model": "yolov3_sppu",
+              "mAP50_95": 0.6878376734484506
+            },
+            {
+              "model": "fasterrcnn_resnet50_fpn",
+              "mAP50_95": 0.6708684075133223
+            },
+            {
+              "model": "yolov3_tinyu",
+              "mAP50_95": 0.6524281745463578
+            }
+          ],
+          "ap_input_score_floor": 0.001,
+          "operating_score_strict_gt": 0.2,
+          "cluster_iou": 0.2,
+          "min_distinct_models": 3
+        }
+      }
+    }
+  }
+}

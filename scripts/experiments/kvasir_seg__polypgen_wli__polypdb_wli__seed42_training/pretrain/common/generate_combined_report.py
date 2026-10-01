@@ -165,7 +165,7 @@ def main() -> None:
               "## 7. 产物路径", "",
               f"- 训练结果：`runs/training/{BASE}/<condition>/seed<seed>/<dataset>/<model>/test_metrics.json`",
               f"- 投票结果：`runs/inference/{BASE}/consolidated_<condition>_seed<seed>_voting/voting_analysis.json`",
-              f"- CRV 框级迁移 pilot：`reports/{BASE}/crv_counterfactual_fusion_pilot_pretrained_aug5x.md`（验证集不支持稳定正权重，未替换主融合方案）", ""]
+              ""]
     REPORT_ROOT.mkdir(parents=True, exist_ok=True)
     target = REPORT_ROOT / "combined_scratch_pretrained_aug3x_aug5x_seed88_123_666.md"
     target.write_text("\n".join(lines), encoding="utf-8")

@@ -30,10 +30,10 @@ import numpy as np
 
 os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
 
-ROOT = Path(__file__).resolve().parents[3]
-DATA_VERSION = os.environ.get("GI_DATA_VERSION", "v1_aligned_centerwise_split42_aug42_10x")
-RUN_GROUP = os.environ.get("GI_RUN_GROUP", "seed88_v1_aligned_centerwise_12x3")
-EXPERIMENT_ID = os.environ.get("GI_EXPERIMENT_ID", "seed88_v1_aligned_centerwise_12x3")
+ROOT = Path(__file__).resolve().parents[5]
+DATA_VERSION = os.environ.get("GI_DATA_VERSION", "kvasir_seg__polypgen_wli__polypdb_wli__seed42")
+RUN_GROUP = os.environ.get("GI_RUN_GROUP", "kvasir_seg__polypgen_wli__polypdb_wli__seed42")
+EXPERIMENT_ID = os.environ.get("GI_EXPERIMENT_ID", "kvasir_seg__polypgen_wli__polypdb_wli__seed42")
 AUGMENTATION_PROTOCOL = os.environ.get("GI_AUGMENTATION_PROTOCOL", "v1_10x")
 AUGMENTATION_ENABLED = os.environ.get("GI_AUGMENTATION_ENABLED", "1") == "1"
 DATASETS = ("kvasir_seg", "polypgen", "cvc_clinicdb")
@@ -148,14 +148,14 @@ def make_config(dataset: str, model: str, yaml_path: Path, device: str, epochs: 
 
     weight = ROOT / "assets/pretrained_weights" / WEIGHTS[model]
     return {
-        "protocol": "seed88_v1_aligned_centerwise_12x3",
+        "protocol": DATA_VERSION,
         "dataset": dataset,
         "model": model,
         "framework": "torchvision" if model == "fasterrcnn_resnet50_fpn" else "ultralytics",
         "seed": SEED,
         "split_seed": 42,
-        "split_id": "v1_aligned_centerwise",
-        "split_manifest": f"datasets/manifests/experiments/seed88_v1_aligned_centerwise_12x3/{dataset}.json",
+        "split_id": "seed42",
+        "split_manifest": f"datasets/manifests/experiments/{DATA_VERSION}/{dataset}.json",
         "dataset_version": DATA_VERSION,
         "augmentation_seed": 42,
         "augmentation_protocol": AUGMENTATION_PROTOCOL,

@@ -64,3 +64,5 @@ Remove `--check-only` only after providing the dataset and the corresponding ori
 ## Reproducibility and attribution
 
 The split seed is 42 and model seeds are 88, 123, and 666. All 648 canonical training runs completed. The release index associates each checkpoint with its condition, dataset, model, seed, size and SHA-256. Source dataset licenses and citation instructions are controlled by their publishers; do not assign this repository's future software license to those data. The study manuscript and author citation will be linked after publication review.
+
+The paper-specific WBF validation grid, frozen choices, cache hashes, and a script to replay fusion from exported predictions are in [`scripts/paper_reproduction/`](scripts/paper_reproduction/). The manuscript analysis scripts supplied by the authors are in [`paper_analysis/`](paper_analysis/); their `generated/` JSON and TeX inputs are described there but are not part of the supplied archive.

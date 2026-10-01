@@ -8,3 +8,4 @@ Pillow>=10,<13
 matplotlib>=3.8,<4
 PyYAML>=6,<7
 huggingface-hub>=1.23,<2
+ensemble-boxes==1.0.9

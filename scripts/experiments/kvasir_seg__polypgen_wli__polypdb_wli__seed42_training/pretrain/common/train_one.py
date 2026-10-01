@@ -20,7 +20,7 @@ from pathlib import Path
 
 SCRIPT_ROOT = Path(__file__).resolve().parents[1]
 ROOT = SCRIPT_ROOT.parents[3]
-CORE_PATH = ROOT / "scripts/experiments/seed88_v1_aligned_centerwise_12x3/run_formal.py"
+CORE_PATH = ROOT / "scripts/experiments/kvasir_seg__polypgen_wli__polypdb_wli__seed42_training/pretrain/common/training_core.py"
 BASE_DATA_VERSION = "kvasir_seg__polypgen_wli__polypdb_wli__seed42"
 AUG3X_DATA_VERSION = BASE_DATA_VERSION + "__aug3x"
 AUG5X_DATA_VERSION = BASE_DATA_VERSION + "__aug5x"
