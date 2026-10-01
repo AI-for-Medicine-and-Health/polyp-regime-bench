@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+datasets/raw/
+datasets/materialized/
+assets/pretrained_weights/
+models/
+runs/
+*.pt
+*.pth
+*.zip
+*.rar

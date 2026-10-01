@@ -1,0 +1,10 @@
+# Install a compatible PyTorch and Torchvision build first for your CPU/CUDA platform.
+ultralytics==8.4.130
+albumentations==2.0.8
+opencv-python>=4.10,<5
+numpy>=2.0,<3
+scipy>=1.15,<2
+Pillow>=10,<13
+matplotlib>=3.8,<4
+PyYAML>=6,<7
+huggingface-hub>=1.23,<2
