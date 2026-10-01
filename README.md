@@ -6,6 +6,28 @@ This project benchmarks 12 detection architectures across Kvasir-SEG, PolypGen-W
 
 The study's central result is that training regime changes detector rankings. The project also compares hard voting and weighted boxes fusion against selected single models and reports inference cost. These are retrospective research benchmarks, not clinical validation.
 
+## Results at a glance
+
+Test $\mathrm{mAP}_{50:95}$, averaged over three model seeds. The first three columns are means across all 12 detectors. The selected single detector and tuned Top-6 weighted boxes fusion (WBF) use validation-based selection under Aug-10×.
+
+| Test dataset | Scratch mean | Pretrained mean | Aug-10× mean | Selected single | Tuned WBF |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Kvasir-SEG | 0.122 | 0.639 | 0.672 | 0.707 | **0.743** |
+| PolypGen WLI | 0.075 | 0.529 | 0.591 | 0.655 | **0.691** |
+| PolypDB WLI | 0.379 | 0.698 | 0.749 | 0.792 | **0.814** |
+
+![Test performance across training regimes](assets/benchmark_results.png)
+
+Pretraining changed the detector ranking substantially: RT-DETR-X rose from 10th–12th under scratch training to first or second in all 15 pretrained regime–dataset combinations. Tuned WBF exceeded the best individual detector in 13 of those 15 combinations. At 640×640 on the shared H200 NVL used in this study, RT-DETR-X took 35.6 ms/frame (28.1 FPS); serial Top-6 WBF took about 137–143 ms/frame (7.0–7.3 FPS). These timings are indicative, not a controlled hardware comparison. Detailed per-run metrics and prediction exports are in the [model repository](https://huggingface.co/AI-for-Medicine-and-Health/polyp-regime-bench-models).
+
+### Predictions on original endoscopy frames
+
+The figure below uses two **Kvasir-SEG test images**. Each row shows the unmodified source frame, the reference lesion box, and RT-DETR-X predictions from three training regimes (seed 88). Green is the reference box; cyan is a matched prediction; pink is an unmatched prediction. Detections use score >0.20 and matching uses IoU ≥0.50. The two images were selected to illustrate a training-regime effect; they do not estimate typical accuracy.
+
+![Original Kvasir-SEG frames and detector predictions](assets/kvasir_qualitative.png)
+
+Image source: [Kvasir-SEG, Simula Research Laboratory](https://datasets.simula.no/kvasir-seg/) (Jha et al., *Kvasir-SEG: A Segmented Polyp Dataset*, MMM 2020). Its published terms restrict use to research and education, require citation, and require prior written permission for commercial use. Example test image IDs: `19fbdf4d-bf29-4a07-831c-3742f7495e57` and `b0cad6a8-03a0-43cd-bf8e-86eeed830d4b`. Other original dataset images are not redistributed here.
+
 ## Repositories
 
 - Code and project documentation: `AI-for-Medicine-and-Health/polyp-regime-bench` (this repository)
