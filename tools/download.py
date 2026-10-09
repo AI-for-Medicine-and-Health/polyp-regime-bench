@@ -11,7 +11,7 @@ from huggingface_hub import snapshot_download
 ROOT = Path(__file__).resolve().parents[1]
 DATA_REPO = "AI-for-Medicine-and-Health/polyp-regime-bench-data"
 MODEL_REPO = "AI-for-Medicine-and-Health/polyp-regime-bench-models"
-CONDITIONS = ("scratch_base", "pretrained_base", "pretrained_aug3x", "pretrained_aug5x", "pretrained_aug10x", "pretrained_repeat5x")
+CONDITIONS = ("scratch_base", "scratch_100ep", "pretrained_base", "pretrained_aug3x", "pretrained_aug5x", "pretrained_aug10x", "pretrained_repeat5x")
 DATASETS = ("kvasir_seg", "polypgen_wli", "polypdb_wli")
 MODELS = ("fasterrcnn_resnet50_fpn", "yolo11_s", "yolov5_s", "yolov8_s", "yolov9_s", "yolov3_tinyu", "yolov3_sppu", "yolov10_s", "yolo12_s", "yolo26_s", "rtdetr_l", "rtdetr_x")
 

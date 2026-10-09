@@ -1,7 +1,7 @@
 # PolypRegimeBench
 
 **Does the "best" polyp detector stay the best if you train it differently?**
-A controlled benchmark of 12 object detectors × 3 white-light colonoscopy datasets × 6 training regimes × 3 seeds = **648 trained models**, all released.
+A controlled benchmark of 12 object detectors × 3 white-light colonoscopy datasets × 7 training regimes × 3 seeds, with all **756 checkpoints** released.
 
 [📄 Paper (under review)](#citation) · [🤗 Checkpoints & predictions](https://huggingface.co/AI-for-Medicine-and-Health/polyp-regime-bench-models) · [🤗 Split & augmentation manifests](https://huggingface.co/datasets/AI-for-Medicine-and-Health/polyp-regime-bench-data)
 
@@ -9,14 +9,15 @@ A controlled benchmark of 12 object detectors × 3 white-light colonoscopy datas
 
 ---
 
-## TL;DR — four findings
+## TL;DR — five findings
 
 | # | Finding | Evidence |
 |---|---|---|
-| 1 | **Initialization flips the leaderboard.** | RT-DETR-X ranks **12th / 12th / 10th** when trained from scratch, but **1st or 2nd in all 15** pretrained settings. Kendall's τ between scratch and pretrained rankings is −0.39 to 0.06 (unrelated or reversed). |
-| 2 | **Augmentation helps through new views, not extra training.** | Repeating each image 5× (same number of steps as Aug-5×) gives **no gain**; Aug-5× adds **+0.024 / +0.054 / +0.042** mAP50:95 over that control. |
-| 3 | **Ensemble gains depend on how well the members are trained.** | Tuned Top-6 WBF beats the best single detector in **13 of 15** pretrained settings and fails only with the shortest training. Hard voting mostly buys precision (+0.10–0.13) rather than AP. |
-| 4 | **Accuracy costs speed.** | RT-DETR-X: **35.6 ms (28 FPS)**. Top-6 ensembles: **~140 ms (~7 FPS)**, i.e. not real-time when run serially. |
+| 1 | **Initialization and training budget reshape the leaderboard.** | RT-DETR-X ranks **12th / 12th / 10th** after 25 scratch epochs, **3rd / 5th / 6th** after 100, and **1st or 2nd in all 15** pretrained settings. Kendall's τ between scratch and pretrained rankings is −0.39 to 0.06 after 25 epochs and −0.12 to 0.33 after 100 (unrelated to weak). |
+| 2 | **A longer scratch schedule does not replace pretraining.** | With 100 scratch epochs the 12-detector mean mAP50:95 is only **0.11–0.41**, versus **0.53–0.70** with COCO-pretrained weights trained for 25 epochs. |
+| 3 | **Augmentation helps through new views, not extra training.** | Repeating each image 5× (same number of steps as Aug-5×) gives **no gain**; Aug-5× adds **+0.024 / +0.054 / +0.042** mAP50:95 over that control. |
+| 4 | **Ensemble gains depend on how well the members are trained.** | Tuned Top-6 WBF beats the best single detector in **13 of 15** pretrained settings, but with scratch-trained members in only one of three datasets under either budget. Hard voting mostly buys precision (+0.10–0.13) rather than AP. |
+| 5 | **Accuracy costs speed.** | RT-DETR-X: **35.6 ms (28 FPS)**. Top-6 ensembles: **~140 ms (~7 FPS)**, i.e. not real-time when run serially. |
 
 **Practical takeaway:** use pretrained weights first; tune augmentation scale per architecture; use WBF when accuracy matters more than speed; and **always report the training regime** when comparing detectors.
 
@@ -26,7 +27,7 @@ A controlled benchmark of 12 object detectors × 3 white-light colonoscopy datas
 
 ![Study design](assets/study_design.png)
 
-Everything that can be held fixed is held fixed: the split (seed 42), image modality (white-light only), evaluation code, input size (640), and training budget (25 epochs). Only the **training regime** and the **inference-time fusion** vary.
+Everything that can be held fixed is held fixed: the split (seed 42), image modality (white-light only), evaluation code and input size (640). Pretrained regimes train for 25 epochs; scratch models train for 100 epochs and are evaluated at the best validation checkpoint within 25 and within 100 epochs. Only the **training regime** and the **inference-time fusion** vary.
 
 <table>
 <tr><td valign="top">
@@ -45,8 +46,8 @@ Everything that can be held fixed is held fixed: the split (seed 42), image moda
 
 | Regime | What changes |
 |---|---|
-| Scratch | random initialization |
-| Pretrained | public pretrained weights, original images |
+| Scratch-25 / Scratch-100 | random initialization; best validation checkpoint within 25 / 100 epochs |
+| Pretrained | COCO-pretrained weights, original images, 25 epochs |
 | Aug-3× / 5× / 10× | + offline augmented copies (nested sets) |
 | Repeat-5× | each original image ×5 — **control**: same steps as Aug-5×, no new views |
 
@@ -69,13 +70,17 @@ All selections are frozen on validation data before touching the test set.
 
 ![Performance across training regimes](assets/regime_overview.png)
 
-Pretraining lifts the 12-detector mean mAP50:95 from **0.122 → 0.639** (Kvasir-SEG), **0.075 → 0.529** (PolypGen) and **0.379 → 0.698** (PolypDB). It also narrows the gap between the best and worst architecture from 0.22–0.39 to 0.10–0.19.
+Pretraining lifts the 12-detector mean mAP50:95 from **0.122 → 0.639** (Kvasir-SEG), **0.075 → 0.529** (PolypGen) and **0.379 → 0.698** (PolypDB) relative to Scratch-25. Quadrupling the scratch budget closes little of this gap: Scratch-100 reaches only **0.170 / 0.106 / 0.406**. Pretraining also narrows the gap between the best and worst architecture from 0.22–0.41 to 0.10–0.19.
 
-### 2. Rankings under scratch training say little about rankings after pretraining
+![Validation mAP during training](assets/training_convergence.png)
+
+Why 25 epochs for pretrained models but 100 for scratch? Pretrained regimes reach their best validation mAP early (median best epoch 3–12) and then plateau, whereas scratch models are still improving at epoch 25 and level off only after about 50 epochs (median best epoch 55).
+
+### 2. Rankings depend on both initialization and training budget
 
 ![Rank of each detector under each regime](assets/rank_by_regime.png)
 
-Each cell is a detector's rank (1 = best test mAP50:95). Left of the vertical line is scratch training; the five pretrained regimes are on the right. Once pretrained, rankings are stable (τ = 0.55–0.94). Scratch rankings are unrelated or reversed. A benchmark trained with a single recipe therefore answers a narrower question than its leaderboard suggests.
+Each cell is a detector's rank (1 = best test mAP50:95). Left of the vertical line are the two scratch budgets; the five pretrained regimes are on the right. Once pretrained, rankings are stable (τ = 0.55–0.94). Scratch rankings are unrelated or only weakly related to them, and even the two scratch budgets disagree with each other (τ = 0.55–0.73). A benchmark trained with a single recipe therefore answers a narrower question than its leaderboard suggests.
 
 ### 3. Augmentation: it's the new views, not the extra steps
 
@@ -143,7 +148,7 @@ Per-lesion miss rate of RT-DETR-X (Aug-10×), by quartile of lesion property. **
 
 ![Original Kvasir-SEG frames and detector predictions](assets/kvasir_qualitative.png)
 
-RT-DETR-X (seed 88) on two Kvasir-SEG test frames. Green = reference box, cyan = matched detection, pink = unmatched detection (score > 0.20, IoU ≥ 0.50). From scratch the model fires boxes everywhere; once pretrained it localizes both lesions. These examples are illustrative and were chosen to show the regime effect, not typical accuracy.
+RT-DETR-X (seed 88) on two Kvasir-SEG test frames. Green = reference box, cyan = matched detection, pink = unmatched detection (score > 0.20, IoU ≥ 0.50). After 25 scratch epochs the model fires boxes everywhere; once pretrained it localizes both lesions. These examples are illustrative and were chosen to show the regime effect, not typical accuracy.
 
 <sub>Images: [Kvasir-SEG, Simula Research Laboratory](https://datasets.simula.no/kvasir-seg/) (Jha et al., MMM 2020), test IDs `19fbdf4d-bf29-4a07-831c-3742f7495e57` and `b0cad6a8-03a0-43cd-bf8e-86eeed830d4b`. Research and education use only; citation required; commercial use needs the publisher's written permission. No other dataset images are redistributed here.</sub>
 
@@ -154,10 +159,10 @@ RT-DETR-X (seed 88) on two Kvasir-SEG test frames. Green = reference box, cyan =
 | Where | What |
 |---|---|
 | **This repo** | Split/augmentation tooling, training entry points, inference, evaluation, ensemble (hard vote / WBF) and paper analysis scripts |
-| [🤗 `polyp-regime-bench-models`](https://huggingface.co/AI-for-Medicine-and-Health/polyp-regime-bench-models) | All **648** `best.pt` checkpoints (12 detectors × 3 datasets × 3 seeds × 6 regimes), cached per-image predictions, ensemble outputs, SHA-256 index with test metrics |
+| [🤗 `polyp-regime-bench-models`](https://huggingface.co/AI-for-Medicine-and-Health/polyp-regime-bench-models) | All **756** `best.pt` checkpoints (12 detectors × 3 datasets × 3 seeds × 7 regimes), cached per-image predictions, ensemble outputs, SHA-256 index with test metrics |
 | [🤗 `polyp-regime-bench-data`](https://huggingface.co/datasets/AI-for-Medicine-and-Health/polyp-regime-bench-data) | Exact split and augmentation **manifests**. No third-party images: download those from the original publishers. |
 
-Checkpoints follow the layout `checkpoints/<regime>/seed<88|123|666>/<dataset>/<model>/best.pt`, where `<regime>` is one of `scratch_base`, `pretrained_base`, `pretrained_aug3x`, `pretrained_aug5x`, `pretrained_aug10x`, `pretrained_repeat5x`.
+Checkpoints follow the layout `checkpoints/<regime>/seed<88|123|666>/<dataset>/<model>/best.pt`, where `<regime>` is one of `scratch_base` (Scratch-25), `scratch_100ep` (Scratch-100), `pretrained_base`, `pretrained_aug3x`, `pretrained_aug5x`, `pretrained_aug10x`, `pretrained_repeat5x`.
 
 ## Quick start
 
@@ -221,7 +226,7 @@ assets/                figures used in this README
 ## Limitations
 
 - Three datasets, one split each, three seeds. Split variability is not measured, and image-level splits may put correlated frames in different partitions. Only PolypGen's test set comes from an unseen centre.
-- Fixed 25-epoch budget. Longer schedules could narrow the scratch-vs-pretrained gap, especially for transformers.
+- Pretrained regimes use 25 epochs and scratch training at most 100, with a single fixed learning rate. Scratch-100 therefore compares initializations at unequal compute, and longer or differently scheduled scratch training might narrow the gap further.
 - Some thresholds (AP integration, operating point, vote IoU) were fixed after exploratory analyses that touched the test sets. All ensemble parameters were validation-selected and frozen, but confirmation on an untouched cohort is still needed.
 - Latency was measured on a shared GPU, and ensemble latency is a serial sum.
 - Test sets are almost entirely polyp-positive still images. They say nothing about false alarms over a full procedure or about adenoma detection rate.
